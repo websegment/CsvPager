@@ -2,20 +2,20 @@
 
 ## Readme.
 
-CsvPage{
-    /* Propaties */
-    public int $show = 20;
-    public int $range = 3;
-    public array $csv = array();
-    public array $pager = array();
-    public int $record = 0;
-    public int $page = 0;
-    public int $current = 1;
-    private array $source = array();
-    public string $prev = "";
-    public string $next = "";
-    /* Method */
-    public __construct(array $csvdata[, string $currentPage = "1"[, int $showCount = 20[, int $range = 3]]]);
+    CsvPage{
+        /* Propaties */
+        public int $show = 20;
+        public int $range = 3;
+        public array $csv = array();
+        public array $pager = array();
+        public int $record = 0;
+        public int $page = 0;
+        public int $current = 1;
+        private array $source = array();
+        public string $prev = "";
+        public string $next = "";
+        /* Method */
+        public __construct(array $csvdata[, string $currentPage = "1"[, int $showCount = 20[, int $range = 3]]]);
 }
 
 ## Example.
