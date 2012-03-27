@@ -16,7 +16,7 @@
         public string $next = "";
         /* Method */
         public __construct(array $csvdata[, string $currentPage = "1"[, int $showCount = 20[, int $range = 3]]]);
-}
+    }
 
 ## Example.
 
