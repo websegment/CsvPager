@@ -120,6 +120,5 @@ class CsvPager{
 		if($this->current < $this->page){
 			$this->next = ($this->current + 1);
 		}
-		return $this;
 	}
 }
