@@ -37,11 +37,11 @@ class CsvPager{
 	public $pager = array();
 	
 	/**
-	 * Csv record count.
+	 * Csv allPage count.
 	 * 
 	 * @var int
 	 */
-	public $record = 0;
+	public $allPage = 0;
 	
 	/**
 	 * Page count.
@@ -90,14 +90,15 @@ class CsvPager{
 		$this->source = $source;
 		$this->show = $show;
 		$this->range = $range;
-		$this->record = count($this->source);
+		$this->allPage = count($this->source);
 		if(is_numeric($param) && $param > 1){
 			$this->current = $param;
 		}
-		$this->page = ceil($this->record / $this->show);
+		//Round fractions up
+		$this->page = ceil($this->allPage / $this->show);
 		$showIndex = ($this->current - 1) * $this->show;
 		while($showIndex < $this->current * $this->show){
-			if($showIndex >= $this->record){
+			if($showIndex >= $this->allPage){
 				break;
 			}
 			$this->csv[] = $this->source[$showIndex];
