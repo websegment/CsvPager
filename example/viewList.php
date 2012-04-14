@@ -48,7 +48,7 @@ body {
 <tbody>
 <?php foreach($csv->csv as $d):?>
 <tr>
-	<td><?php echo htmlspecialchars($d[0])?></td>
+<td><?php echo htmlspecialchars($d[0])?></td>
 <td><?php echo htmlspecialchars($d[1])?></td>
 <td><?php echo htmlspecialchars($d[2])?></td>
 <td><?php echo htmlspecialchars($d[3])?></td>
@@ -67,15 +67,15 @@ body {
 <?php if(count($csv->pager) > 0):?>
 <div class="pagination">
 <ul>
-<?php if($csv->prev == ""):?>
+<?php if($csv->prev == ''):?>
 <li class="disabled"><a href="#">prev</a></li>
 <?php else:?>
 <li><a href="?p=<?php echo urlencode($csv->prev)?>">prev</a></li>
 <?php endif;?>
 <?php foreach($csv->pager as $p):?>
-<li<?php echo($p == $csv->current)?' class="active"':"";?>><a href="?p=<?php echo urlencode($p)?>"><?php echo htmlspecialchars($p)?></a></li>
+<li<?php echo($p == $csv->current)?' class="active"':'';?>><a href="?p=<?php echo urlencode($p)?>"><?php echo htmlspecialchars($p)?></a></li>
 <?php endforeach;?>
-<?php if($csv->next == ""):?>
+<?php if($csv->next == ''):?>
 <li class="disabled"><a href="#">next</a></li>
 <?php else:?>
 <li><a href="?p=<?php echo urlencode($csv->next)?>">next</a></li>
